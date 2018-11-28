@@ -1,0 +1,19 @@
+#默认使用配置
+server:
+  port: 8080
+#开发配置
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url:  jdbc:mysql://localhost:3306/demo
+    username: root
+    password: 1234
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#分页插件
+
+mybatis:
+  type-aliases-package: com.liwen.demo
+  mapper-locations: mapper/*.xml
